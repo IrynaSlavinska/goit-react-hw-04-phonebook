@@ -28,11 +28,9 @@ function App() {
   };
 
   const deleteContact = contactIdToDel => {
-    setContacts(prevState => ({
-      contacts: prevState.contacts.filter(
-        contact => contact.id !== contactIdToDel
-      ),
-    }));
+    setContacts(previousContacts =>
+      previousContacts.filter(contact => contact.id !== contactIdToDel)
+    );
   };
 
   const getFilteredContacts = () => {
